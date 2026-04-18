@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Amazing Future!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f9ff;
+        }
+        .chapter {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .activity {
+            background: #ffe8e8;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        h1 {
+            color: #ff6b6b;
+            text-align: center;
+        }
+        h2 {
+            color: #4d96ff;
+        }
+        .note-area {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            border: 2px solid #4d96ff;
+            border-radius: 5px;
+        }
+        .star {
+            color: #ffd700;
+            font-size: 24px;
+        }
+        button {
+            background: #4d96ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 My Amazing Future! 🌟</h1>
+    <div class="chapter">
+        <h2>Chapter 1: What Makes Me Special?</h2>
+        <p>Hey there, future superstar! 👋 Did you know that everyone has their own special talents and strengths? Let's discover yours!</p>
+        
+        <div class="activity">
+            <h3>✍️ Fun Activity #1: My Superpowers</h3>
+            <p>Write down 3 things you're really good at:</p>
+            <textarea class="note-area" placeholder="1. I'm great at..."></textarea>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <h2>Chapter 2: Things I Love to Do!</h2>
+        <p>The best jobs are often connected to things we enjoy doing. Think about what makes you happy!</p>
+        
+        <div class="activity">
+            <h3>🎨 Fun Activity #2: My Happy List</h3>
+            <p>What activities make you lose track of time because they're so fun?</p>
+            <textarea class="note-area" placeholder="I love it when I'm..."></textarea>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <h2>Chapter 3: Cool Jobs to Explore!</h2>
+        <p>Did you know there are thousands of exciting jobs out there? Here are some fun ones:</p>
+        <ul>
+            <li>🎮 Video Game Designer</li>
+            <li>🐘 Wildlife Conservationist</li>
+            <li>🚀 Space Engineer</li>
+            <li>🍰 Pastry Chef</li>
+            <li>🎨 Digital Artist</li>
+            <li>🔬 Science Explorer</li>
+            <li>📱 App Creator</li>
+            <li>🎬 YouTuber/Content Creator</li>
+        </ul>
+    </div>
+
+    <div class="chapter">
+        <h2>Chapter 4: My Dream Job Board</h2>
+        <div class="activity">
+            <h3>🌈 Fun Activity #3: Future Me</h3>
+            <p>What kind of job sounds exciting to you? What would you do in this job?</p>
+            <textarea class="note-area" placeholder="In my dream job, I would..."></textarea>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <h2>Remember...</h2>
+        <p>You don't have to know exactly what you want to be right now! The future is full of possibilities, and you have lots of time to explore and discover what you love. The most important thing is to:</p>
+        <ul>
+            <li>Try new things</li>
+            <li>Pay attention to what you enjoy</li>
+            <li>Never stop learning</li>
+            <li>Believe in yourself!</li>
+        </ul>
+    </div>
+
+    <script>
+        // Save text inputs to local storage
+        const textareas = document.querySelectorAll('.note-area');
+        textareas.forEach((textarea, index) => {
+            textarea.value = localStorage.getItem(`activity${index}`) || '';
+            textarea.addEventListener('input', (e) => {
+                localStorage.setItem(`activity${index}`, e.target.value);
+            });
+        });
+    </script>
+
+
+</body></html>
